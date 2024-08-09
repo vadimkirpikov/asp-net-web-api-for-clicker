@@ -1,0 +1,22 @@
+﻿services:
+  rest:
+    image: rest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5000:8080"
+    depends_on:
+      - db
+  db:
+    image: postgres:latest
+    restart: always
+    volumes:
+      - ./pgsql/data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=vadimkirpikov
+      - POSTGRES_DB=gamedb
+      - POSTGRES_PASSWORD=mypassword
+    ports:
+      - "5432:5432"
+    
