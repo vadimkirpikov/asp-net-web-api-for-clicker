@@ -4,7 +4,7 @@ namespace Rest.Models.Repositories;
 
 public interface IRepository
 {
-    Task<User?> GetUserAsync(int id);
-    Task CreateUserAsync(UserPlatformInfo userPlatformInfo);
+    Task<User?> GetUserAsync(string platformId);
+    Task CreateUserAsync(string platformId);
     Task UpdateUserAsync(User user);
 }

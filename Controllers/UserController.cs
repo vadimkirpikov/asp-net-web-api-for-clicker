@@ -15,10 +15,10 @@ public class UserController : ControllerBase
         _userService = userService;
     }
 
-    [HttpGet("{id}")]
-    public async Task<IActionResult> GetUserAsync([FromRoute] int id)
+    [HttpGet("{platformId}")]
+    public async Task<IActionResult> GetUserAsync([FromRoute] string platformId)
     {
-        var user = await _userService.GetUserAsync(id);
+        var user = await _userService.GetUserAsync(platformId);
         if (user is null)
         {
             return NotFound();
@@ -35,9 +35,9 @@ public class UserController : ControllerBase
     }
 
     [HttpPost("create")]
-    public async Task<IActionResult> CreateNewUserAsync([FromBody] UserPlatformInfo userPlatformInfo)
+    public async Task<IActionResult> CreateNewUserAsync([FromBody] string platformId)
     {
-        var user = await _userService.CreateUserAsync(userPlatformInfo);
+        var user = await _userService.CreateUserAsync(platformId);
         if (user is null)
         {
             return NotFound();

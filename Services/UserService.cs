@@ -12,9 +12,9 @@ public class UserService : IUserService
         _repository = repository;
     }
 
-    public async Task<User?> GetUserAsync(int id)
+    public async Task<User?> GetUserAsync(string platfromId)
     {
-        return await _repository.GetUserAsync(id);
+        return await _repository.GetUserAsync(platfromId);
     }
 
     public async Task UpdateUserAsync(User user)
@@ -22,9 +22,9 @@ public class UserService : IUserService
         await _repository.UpdateUserAsync(user);
     }
 
-    public async Task<User?> CreateUserAsync(UserPlatformInfo userPlatformInfo)
+    public async Task<User?> CreateUserAsync(string platformId)
     {
-        await _repository.CreateUserAsync(userPlatformInfo);
-        return await _repository.GetUserAsync(userPlatformInfo.PlatformId);
+        await _repository.CreateUserAsync(platformId);
+        return await _repository.GetUserAsync(platformId);
     }
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vU1HbVdpHvXtsimxOFODiXLEK2W1lrsSjC4moEz5C9iFkfgczg5j5JGc0Wz6t3z4PFt2i4CR03O/RuKcskAD1w==",
+  "dgSpecHash": "lPWZoQatJfEQoL1+9GBq2K7Qx/bA8FTfHIj6SHhtqy5omC1vZVoIMa40ZqL4tBkN+wK513KhNxQA4Raut9NPVA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Vadim\\RiderProjects\\Rest\\Rest.csproj",
+  "projectFilePath": "\\\\wsl.localhost\\Debian\\home\\vadimkirpikov\\asp-net-web-api-for-clicker\\Rest.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Vadim\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Vadim\\.nuget\\packages\\microsoft.aspnetcore.openapi\\8.0.3\\microsoft.aspnetcore.openapi.8.0.3.nupkg.sha512",
